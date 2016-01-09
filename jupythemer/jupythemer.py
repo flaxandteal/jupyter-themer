@@ -1,13 +1,13 @@
 from __future__ import print_function
 
-import jupyter
+import jupyter_core.paths
 import os
 import sys
 import argparse
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
-jupyter_dir = os.path.dirname(jupyter.__file__)
-custom_css_filepath = jupyter_dir + '/notebook/static/custom/custom.css'
+jupyter_dir = jupyter_core.paths.jupyter_config_dir()
+custom_css_filepath = os.path.join(jupyter_dir, 'custom', 'custom.css')
 
 
 def write_to_css(content):
