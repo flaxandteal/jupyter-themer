@@ -13,7 +13,7 @@ setup(
     url='https://github.com/transcranial/jupyter-themer',
     packages = find_packages(exclude=['*test*']),
     package_data = {
-        'jupythemer': ['styles/**/*.css']
+        'jupythemer': ['styles/*/*.css', 'styles/*/*/*.css']
     },
     entry_points = {
         'console_scripts' : [
