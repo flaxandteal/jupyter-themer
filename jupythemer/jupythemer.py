@@ -38,8 +38,8 @@ def run(args=None):
         try:
             with open('{}/styles/color/{}.css'.format(current_dir, args.color), 'r') as f_color:
                 content_all += f_color.read() + '\n'
-        except:
-            print('Bad argument passed to --color')
+        except Exception as e:
+            print('Bad argument passed to --color', e)
             sys.exit(1)
 
     if args.layout is not None:
