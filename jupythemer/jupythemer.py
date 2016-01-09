@@ -15,8 +15,8 @@ def write_to_css(content):
         os.makedirs(os.path.dirname(custom_css_filepath), exists_ok=True)
         with open(custom_css_filepath, 'w') as f:
             f.write(content)
-    except:
-        print('Error writing to custom.css (%s)' % custom_css_filepath)
+    except Exception as e:
+        print('Error writing to custom.css (%s)' % custom_css_filepath, e)
         sys.exit(1)
 
 
