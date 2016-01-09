@@ -12,7 +12,7 @@ custom_css_filepath = os.path.join(jupyter_dir, 'custom', 'custom.css')
 
 def write_to_css(content):
     try:
-        os.makedirs(os.path.dirname(custom_css_filepath), exists_ok=True)
+        os.makedirs(os.path.dirname(custom_css_filepath), exist_ok=True)
         with open(custom_css_filepath, 'w') as f:
             f.write(content)
     except Exception as e:
